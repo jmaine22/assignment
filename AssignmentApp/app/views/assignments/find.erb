@@ -1,0 +1,21 @@
+<h1>Listing Assignments</h1>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Course</th>
+    <th>Due date</th>
+    <th>Finish date</th>
+  </tr>
+
+  <%@assignments.each do|assignment| %>
+    <tr>
+      <td><%= assignment.name %></td>
+      <td><%= assignment.description %></td>
+      <td><%= assignment.course %></td>
+      <td><%= assignment.due_date %></td>
+      <td><%= assignment.finish_date %></td>
+    </tr>
+  <% end %>
+</table>
+<%= link_to 'Back', assignments_path%>
